@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+
+  web:
+    container_name: tt_web
+    build: ./
+    command:  php -S 0.0.0.0:80 -t /var/www
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www
